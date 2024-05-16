@@ -1,0 +1,256 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@page {
+    size: A4; /* You can adjust the size as needed, e.g., letter, legal, etc. */
+    margin: 0; /* Remove default margins */
+}
+  
+@media print {
+	/* Set a specific title for printing */
+    head { display: none; }
+    title::after {
+		content: "CV";
+        display: block;
+        visibility: visible;
+        height: 0;
+    }
+}
+
+body {
+    page-break-before: always;
+}
+li {
+	color: #3b4557 !important;
+}
+
+h1 {
+	color: #3b4557 !important;
+    font-style: normal !important;
+    padding: 0px !important;
+	border: 0;
+}
+
+button {
+	font-size: 25px;
+	background-color: rgb(83, 83, 83);
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+button:hover {
+	background-color: black;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+section {
+	border-top: 1mm dotted #444;
+	display: flex;
+    flex-direction: column;
+}
+
+section:first-child {
+    border-top: 0;
+    padding: 8mm 0 0 0;
+}
+
+.CostumText {
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	color: #3b4557;
+}
+
+.CostumTextDesign {
+	font-weight: bold;
+}
+
+.CostumSpacer {
+	padding-right: 4mm !important;
+	padding-bottom: 4mm !important;
+}
+
+.descriptionli {
+	box-shadow: 0 0 0 0 !important;
+	padding: 4px !important;
+    margin-bottom: 0 !important;
+}
+
+.contactul2 {
+	padding-right: 5.5mm !important;
+}
+
+.contactul {
+	padding-left: 40px !important;
+}
+
+.centerFlex {
+	width: 210mm;
+    height: 297mm;
+	justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.divskills {
+	padding-top: 22mm !important;
+}
+
+.divWExp {
+	padding-top: 5mm !important;
+}
+
+.divEdu {
+	padding-top: 4mm !important;
+}
+
+.divHobby {
+	padding-top: 20mm !important;
+}
+
+.divTitleEffects {
+	margin-left: 1mm;
+	padding-top: 2.5mm;
+	font-weight: bold;
+	font-size: 28px;
+	padding-left: 13mm !important;
+}
+
+.hyperLinks {
+	color: #648c9c !important;
+	text-decoration: none;
+}
+
+[class*="col-"] {
+	overflow-wrap: break-word;
+	width: 210mm;
+    height: 297mm;
+	background-color: #ffffff;
+	padding: 0px !important;
+}
+
+#header-container {
+	width: 210mm;
+    height: 40px;
+    z-index: 10;
+    background: #ffffff;
+    border-bottom: solid #000000 6px;
+    top: 0px;
+	display: flex;
+	padding-bottom: 15px;
+}
+
+#header-main {
+    width: 70mm;
+    height: 40px;
+	margin-top: 10px;
+	margin-left: 1mm;
+	text-align: left;
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	padding-top: 7px;
+	padding-left: 15px;
+}
+
+#header-right {
+    width: 70mm;
+    height: 40px;
+	margin-top: 10px;
+	margin-left: 68mm;
+	text-align: right;
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #3b4557;
+	padding-top: 7px;
+	padding-right: 30px;
+}
+
+#amail {
+	padding-right: 6mm;
+	color: #3b4557 !important;
+	text-decoration: none;
+}
+
+#shortSelfDescription {
+	padding: 8mm 0 0 8mm;
+	background: #ffffff;
+}
+
+#headshot {
+	width: 46mm;
+    float: left;
+    margin-top: 10mm;
+    margin-left: -0.5mm;
+}
+
+#headshot #avatar {
+	width: 100%;
+    height: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#avatar {
+	filter: grayscale(100%);
+	transition: 0.5s;
+	cursor: pointer;
+	user-select: none;
+}
+
+#avatar:hover {
+	filter: grayscale(0%);
+	transform: scale(1.05);
+}
+
+#name {
+	float: left;
+    text-transform: uppercase;
+    padding: 8.5mm 0 0 7mm;
+}
+
+#contact {
+	float: left;
+    padding: 14mm 0 0 7mm;
+}
+
+#clear {
+	clear: both;
+}
+
+#divTitle {
+	float: left;
+    width: 40mm;
+}
+
+#divContent {
+	float: right;
+    width: 141mm;
+	padding-top: 1mm;
+}
+
+#footer-container {
+	width: 210mm;
+    height: 40px;
+    z-index: 10;
+    background: #ffffff;
+    border-bottom: solid #000000 6px;
+    top: 0px;
+	display: flex;
+	padding-top: 0px;
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #3b4557;
+	padding-top: 70px;
+}
+
+#footertextCenter {
+	padding-top: 7px;
+	padding-left: 64mm;
+}
+
+#socialMedia {
+	width: 32px;
+    height: 32px;
+	padding-top: 0px;
+}

@@ -1,0 +1,131 @@
+  html, body, .centerFlex {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(45deg, #333344 15%, #020036 100%);
+    background-size: 400% 400%;
+	  animation: gradient 20s infinite alternate;
+  }
+  
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+  
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  white-space: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  border-spacing: 2px;
+  border-color: grey;
+  font-variant: normal;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+  h1 {
+    color : rgba(0, 0, 0, 0.25);
+    font-style: italic;
+    padding-bottom: 15px;
+  }
+
+  label {
+    color : rgba(153, 153, 153, 0.3);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  a {
+    color: #a1a1a569;
+  }
+
+  .inputDesign {
+    background-color: transparent;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-size: large;  
+    align-items: center;
+    justify-content: center;
+    font-family: "Lucida Sans", sans-serif;
+    outline: none;
+  }
+
+  .inputText {
+    background-color: rgba(156, 156, 156, 0.05);
+  }
+
+  .centerFlex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .menu li:hover {
+    background-color: rgba(70, 70, 70, 0.15);
+  }
+
+  .menu a:hover {
+    background-color: rgba(70, 70, 70, 0.15);
+  }
+
+  .menu input:hover {
+	background-color: rgba(156, 156, 156, 0.15);
+  }
+  
+  #bio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #cccccc;
+}
