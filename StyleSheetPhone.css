@@ -8,21 +8,6 @@
     font-family: "Lucida Sans", sans-serif;
   }
   
-  body {
-    background: linear-gradient(45deg, #333344 15%, #020036 100%);
-    background-size: 400% 400%;
-	  animation: gradient 20s infinite alternate;
-  }
-  
-  @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-}
-  
 table {
   display: table;
   border-collapse: separate;
