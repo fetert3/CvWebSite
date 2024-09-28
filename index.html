@@ -10,10 +10,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function() {
-		var btn = document.getElementById("printcv");
-		btn.onclick = function() {
-			window.print();
-		};
+			// Create a <style> element and store the reference
+			var style = document.createElement('style');
+
+			// Define your CSS styles as a string
+			var css = `
+				html, body, .centerFlex {
+					height: 100%;
+					width: 100%;
+					margin: 0;
+				}`;
+        
+			// Print button functionality
+			var btn = document.getElementById("printcv");
+			btn.onclick = function() {
+		
+				// Append the CSS styles to the <style> element
+				style.appendChild(document.createTextNode(css));
+
+				// Append the <style> element to the <head>
+				document.head.appendChild(style);
+			
+				window.print();
+
+				// Remove the <style> element after printing
+				document.head.removeChild(style);
+			};
 		});
 	</script>
 	<script> //Detects platform
