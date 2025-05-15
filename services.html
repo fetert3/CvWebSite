@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	<title>CV</title>
+	<link rel="icon" type="image/x-icon" href="CV_ico.png">
+	<link rel="stylesheet" href="bio.css">
+	<script type="text/javascript" src="SiteScripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Create a <style> element and store the reference
+			var style = document.createElement('style');
+
+			// Define your CSS styles as a string
+			var css = `
+				html, body, .centerFlex {
+					height: 100%;
+					width: 100%;
+					margin: 0;
+				}`;
+        
+			// Print button functionality
+			var btn = document.getElementById("printcv");
+			btn.onclick = function() {
+		
+				// Append the CSS styles to the <style> element
+				style.appendChild(document.createTextNode(css));
+
+				// Append the <style> element to the <head>
+				document.head.appendChild(style);
+			
+				window.print();
+
+				// Remove the <style> element after printing
+				document.head.removeChild(style);
+			};
+		});
+	</script>
+	<script> //Detects platform
+		async function readTextFile() {
+
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// Code to run for mobile devices
+				const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'StyleSheetPhone.css';
+                document.head.appendChild(link);
+			} else {
+			// Code to run for non-mobile devices
+				const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'StyleSheetDesktop.css';
+                document.head.appendChild(link);				
+			}
+		}
+	readTextFile();
+    </script>
+	<noscript>
+		<meta http-equiv="refresh" content="0.0;url=Nojs.html">
+	</noscript>
+</head>
+
+<body>
+  <div class="centerFlex">
+	<div class="col-3 col-s-3 menu">
+		<div id=header-container>
+			<div id=header-main>
+				Szolgáltatások / Services
+			</div>
+		</div>
+		<div id=shortSelfDescription>
+			<object data="ServicesEN.pdf" type="application/pdf" width="96%" height="550px"></object>
+			&nbsp;&nbsp;
+			<object data="ServicesHU.pdf" type="application/pdf" width="96%" height="550px"></object>
+			<div id=shortSelfDescription>
+				<a href="https://fetert3.github.io/CvWebSite/"><div id=footertextCenter class="CostumText hyperLinks">Előző oldal / Previous Page</div></a>
+			</div>
+		</div>
+		<div id=footer-container>
+			<div id=footertextCenter>
+				Check out my other social medias:
+			</div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div>
+				<a class="hyperLinks" href="https://www.linkedin.com/in/ferenc-kask%C3%B3-1140b7252/"><img id="socialMedia" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Kaskó Ferenc Gábor" title="Kaskó Ferenc Gábor"></a>
+			</div>
+			&nbsp;&nbsp;
+			<div>
+				<a class="hyperLinks" href="https://soundcloud.com/fetert-584451406"><img id="socialMedia" src="https://cdn-icons-png.flaticon.com/512/3256/3256023.png" alt="Kaskó Ferenc Gábor" title="Kaskó Ferenc Gábor"></a>
+			</div>
+		</div>
+	</div>
+  </div>
+</body>
+
+</html>
